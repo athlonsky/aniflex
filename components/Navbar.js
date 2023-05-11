@@ -10,7 +10,7 @@ const Navbar = ({ user }) => {
         <div className="flex-1 ">
           <Link href='/' >
             <div className='  normal-case font-normal text-primary text-xl' >
-              SpicyAnime
+              ANIFLEX
             </div>
           </Link>
         </div>
