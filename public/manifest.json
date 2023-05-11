@@ -23,9 +23,9 @@
       "type": "image/png"
     }
   ],
-  "name": "SpiceAnime",
+  "name": "AniFlex",
   "scope": "/",
-  "short_name": "SpiceAnime",
+  "short_name": "AniFlex",
   "start_url": "/",
   "theme_color": "#DA0037"
 }

@@ -2,7 +2,7 @@
   "name": "nextjs-firebase-npm",
   "description": "a nextjs boilerplate with firebase",
   "license": "MIT",
-  "homepage": "YOUR_GIT_REPO_URL",
+  "homepage": "https://github.com/athlonsky/aniflex.git",
   "repository": {
     "type": "git",
     "url": "git+"
@@ -14,7 +14,7 @@
     "firebase"
   ],
   "bugs": {
-    "url": "YOUR_GIT_REPO_URL/issues"
+    "url": "https://github.com/athlonsky/aniflex.git/issues"
   },
   "engines": {
     "node": ">=14.0.0",
