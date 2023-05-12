@@ -10,7 +10,7 @@ const Navbar = ({ user }) => {
       <div className='w-11/12 mx-auto top-0'>
         <div className="flex-1">
           <Link href='/'>
-            <div className='normal-case font-normal text-primary text-2xl'>
+            <div className='normal-case font-normal text-primary text-4xl'>
               ANIFLEX
             </div>
           </Link>
