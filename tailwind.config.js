@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'damion': ['HelveticaNeue'],
-        'sans': ["'Karla', sans-serif"],
+        'damion': ['NotoSans_medium'],
+        'sans': ["'Karla', NotoSans"],
       }
     }
   },
@@ -18,9 +18,9 @@ module.exports = {
       {
         mytheme: {
 
-          "secondary": "#ba181b",
-          "primary": "#F1E0C5",
-          "accent": "#ba181b",
+          "secondary": "#8533ff",
+          "primary": "#ffffff",
+          "accent": "#763cd8",
           "neutral": "#444444",
           "base-100": "#0b090a",
           "info": "#3ABFF8",

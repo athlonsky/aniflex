@@ -1,5 +1,5 @@
 {
-  "background_color": "#cc2936",
+  "background_color": "#8533ff",
   "display": "standalone",
   "icons": [
     {
@@ -27,5 +27,5 @@
   "scope": "/",
   "short_name": "AniFlex",
   "start_url": "/",
-  "theme_color": "#DA0037"
+  "theme_color": "#8533ff"
 }

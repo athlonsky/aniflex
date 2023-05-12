@@ -5,7 +5,7 @@ export default function Document() {
       <Head>
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/icon.png"></link>
-        <meta name="theme-color" content="#cc2936" />
+        <meta name="theme-color" content="#8533ff" />
         <title>ANIFLEX</title>
       </Head>
       <body>

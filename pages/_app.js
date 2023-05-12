@@ -51,7 +51,7 @@ function MyApp({ Component, pageProps }) {
       <Navbar />
       <BottomNavbar user={user} isLoggedIn={isLoggedIn} />
     </div>
-      <NextNProgress color="#8B0000" startPosition={0.3} height={5} showOnShallow={true} options={{ easing: 'ease-in' }} />
+      <NextNProgress color="#8533ff" startPosition={0.3} height={5} showOnShallow={true} options={{ easing: 'ease-in' }} />
       <div className="sm:pb-24 lg:pb-5 pt-6 lg:pt-24">
         <Component isLoggedIn={isLoggedIn} key={router.asPath} user={user} watchlist={watchlist} setwatchlist={setwatchlist} {...pageProps} handleAuth={handleAuth} />
       </div>

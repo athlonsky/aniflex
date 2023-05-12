@@ -12,7 +12,7 @@ import Episodes from "../components/Episodes";
 
 function details({ deets, setwatchlist, watchlist, user, related, animen, notFound }) {
   const [epi, setEpi] = useState([]);
-  const [epIsLoading, setepIsLoading] = useState(<Spinner radius={30} color='#DA0037' stroke={5} visible={true} />);
+  const [epIsLoading, setepIsLoading] = useState(<Spinner radius={30} color='#8533ff' stroke={5} visible={true} />);
   const fetchData = async () => {
     try {
       const episodesResponse = await axios.get(`https://api.amvstr.ml/api/v2/episode/${animen}`);
@@ -39,7 +39,7 @@ function details({ deets, setwatchlist, watchlist, user, related, animen, notFou
         </div>
       ) : (
         <div className='w-fit h-full ease-in-out duration-200 grid justify-center mx-auto place-content-center'>
-          <Spinner radius={30} color='#DA0037' stroke={5} visible={true} />
+          <Spinner radius={30} color='#8533ff' stroke={5} visible={true} />
         </div>
       )}
       <div className="mb-24 lg:pb-10">

@@ -52,7 +52,7 @@ const Episodes = ({ epi, deets, user, contwatch, setcontwatch }) => {
     marginTop: "25%",
     marginLeft: '40%',
     marginBottom: "25%",
-    borderColor: "red",
+    borderColor: "#8533ff",
   };
   const [initial, setinitial] = useState(0)
   const [final, setfinal] = useState(24)
@@ -81,7 +81,7 @@ const Episodes = ({ epi, deets, user, contwatch, setcontwatch }) => {
     }
   }, [epid])
   return(<>
-    <div className=" place-self-center my-5 w-[97%] aspect-video lg:w-[720px] bg-base-100-focus mx-auto whitespace-wrap">
+    <div className="place-self-center my-5 w-[97%] aspect-video lg:w-[720px] bg-base-100-focus mx-auto whitespace-wrap">
       <div className='mx-auto w-auto'>
         {recentlyWatched?.map((e) =>
           e.animeId === animeId &&
@@ -105,7 +105,7 @@ const Episodes = ({ epi, deets, user, contwatch, setcontwatch }) => {
           {deets.type !== "MOVIE" ? (<div className="mx-auto text-md lg:text-xl text-primary font-damion normal-case line-clamp-2"> Ep. {episodedeets.number} : {" "}{episodedeets.title} </div>
           ) : <div className="mx-auto my-auto text-md lg:text-xl text-primary font-damion normal-case line-clamp-2"> Movie</div>}
         </div>
-        {epi.length > curr && <div className='w-fit btn btn-sm font-normal text-primary rounded-none normal-case font-damion bg-base-100/50 text-md my-auto border-secondary-focus border-2' onClick={() => { seteplink(''), nextep() }}> Ep. {curr + 1} <MdOutlineNavigateNext /></div>
+        {epi.length > curr && <div className='w-fit btn btn-sm font-normal text-primary rounded-none normal-case font-damion bg-base-100/50 text-md my-auto border-secondary-focus border-2' onClick={() => { seteplink(''), nextep() }}> Ep. {curr + 1} <MdOutlineNavigateNext/></div>
         }</div>
       {eplink ?
         <div className='w-full aspect-video'>
@@ -114,7 +114,7 @@ const Episodes = ({ epi, deets, user, contwatch, setcontwatch }) => {
         </div>
         :
         <div className='lg:w-[720px] w-[97%] aspect-video ease-in-out duration-200 grid justify-center mx-auto place-content-center'>
-          <Spinner radius={30} color='#DA0037' stroke={5} visible={true}/>
+          <Spinner radius={30} color='#8533ff' stroke={5} visible={true}/>
         </div>
       }
     </div>
@@ -132,10 +132,10 @@ const Episodes = ({ epi, deets, user, contwatch, setcontwatch }) => {
       <>
         <div className='flex flex-row w-11/12 mx-auto mt-10 mb-4'>
           {epi.length > 25 && (<div className="btn-group gap-2 hover:bg-transparent btn-ghost align-end w-10/12">
-            {initial !== 0 ? (<button className="bg-secondary p-3 duration-100 hover:scale-95 hover:bg-secondary-focus rounded-full border-0 text-primary" onClick={() => { setinitial(initial - 24), setfinal(final - 24) }}><MdOutlineArrowBack className='w-6 h-6' /></button>) : (<button className="btn btn-primary border-0 bg-base-100 hover:bg-secondary text-primary/20 btn-disabled"><MdOutlineArrowBack className='w-6 h-6'/></button>)}
-            {final < epi.length ? (<button className="bg-secondary hover:scale-95 hover:bg-secondary-focus p-3 rounded-full border-0 text-primary" onClick={() => { setinitial(initial + 24), setfinal(final + 24) }} ><MdOutlineArrowForward className='w-6 h-6' /></button>) : (<button className="btn btn-primary-focus border-0 bg-base-100 hover:bg-secondary text-primary/20 btn-disabled"><MdOutlineArrowForward className='w-6 h-6'/></button>)}
+            {initial !== 0 ? (<button className="bg-secondary p-3 duration-100 hover:scale-95 hover:bg-secondary-focus rounded-full border-0 text-primary" onClick={() => { setinitial(initial - 24), setfinal(final - 24) }}><MdOutlineArrowBack className='w-6 h-6'/></button>) : (<button className="btn btn-primary border-0 bg-base-100 hover:bg-secondary text-primary/20 btn-disabled"><MdOutlineArrowBack className='w-6 h-6'/></button>)}
+            {final < epi.length ? (<button className="bg-secondary hover:scale-95 hover:bg-secondary-focus p-3 rounded-full border-0 text-primary" onClick={() => { setinitial(initial + 24), setfinal(final + 24) }} ><MdOutlineArrowForward className='w-6 h-6'/></button>) : (<button className="btn btn-primary-focus border-0 bg-base-100 hover:bg-secondary text-primary/20 btn-disabled"><MdOutlineArrowForward className='w-6 h-6'/></button>)}
           </div>)}
-          <div className="mx-4 text-2xl font-damion text-primary whitespace-nowrap ">
+          <div className="mx-4 text-2xl font-damion text-primary whitespace-nowrap">
             Episode {initial + 1} - {final < epi.length ? final + 1 : epi.length}
           </div>
         </div>

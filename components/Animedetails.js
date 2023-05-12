@@ -43,7 +43,7 @@ const Animedetails = ({ deets, user, watchlist, animen, epi }) => {
       className="bg-cover bg-center -mt-8 w-vw bg-hidden lg:block lg:mx-auto">
       <div className="bg-gradient-to-t from-base-100 to-base-100/20 lg:to-base-100/20 lg:backdrop-blur-lg w-100">
         <div className="flex flex-col md:flex-row items-center w-11/12 mx-auto gap-4">
-          <div className="my-5 mt-48 lg:mt-4 lg:w-9/12">
+          <div className="my-5 mt-48 lg:mt-4">
             <div className="w-[149.33px] lg:w-[280.33px] bg-cover hidden md:block bg-no-repeat h-[233px] lg:h-[400px] shadow-2xl rounded-lg" style={{ backgroundImage: `url(${deets.coverImage.large})` }}>
             </div>
           </div>
@@ -85,7 +85,7 @@ const Animedetails = ({ deets, user, watchlist, animen, epi }) => {
               {
                 deets.totalEpisodes !== null ? (
                   <div className="px-1 py-1 flex text-sm lg:text-lg text-slate-100 text-shadow-xl border-secondary/30 w-fit">
-                    No of Episodes: {epi.length || ' '}
+                    No. of Episodes: {epi.length || ' '}
                   </div>
                 ) : ('')
               }

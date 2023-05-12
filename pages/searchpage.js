@@ -34,7 +34,7 @@ const SearchPage = () => {
                 <Row typeOfAnime={searchList}/>
               ) : (
                 <div className='w-fit h-[200px] my-auto ease-in-out duration-200 grid justify-center mx-auto place-content-center'>
-                  <Spinner radius={30} color='#DA0037' stroke={5} visible={true} />
+                  <Spinner radius={30} color='#8533ff' stroke={5} visible={true} />
                 </div>
               )
             )

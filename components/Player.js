@@ -17,23 +17,22 @@ const Player = ({ sources, handleVideoEnd }) => {
     }
   }, [])
   return(
-    <div>
-      <div className='gap-1 flex py-1 flex-wrap place-content-center'>
-        {sources.map((video) => (
-          <button
-            onClick={() => handleQualityChange(video.url)} key={video.url}
-            className={`${selectedUrl === video.url ? 'bg-secondary-focus text-primary border-2 border-primary':'bg-secondary text-primary'} rounded-full px-3 py-2 text-xs`}
-          >     {video.quality}
-          </button>
-        ))}
-      </div>
+    <div className='gap-1 flex py-1 flex-wrap place-content-center'>
       {selectedUrl && (
         <ReactPlayer
           onEnded={handleVideoEnd}
           url={selectedUrl}
-          controls width={'100%'} height={'100%'}
-        />
+          controls width={'100%'} height={'100%'}/>
       )}
+      <div className='gap-1 flex py-1 flex-wrap place-content-center'>
+        {sources.map((video) => (
+          <button
+            onClick={() => handleQualityChange(video.url)} key={video.url}
+            className={`${selectedUrl === video.url ? 'bg-secondary-focus text-primary border-2 border-primary':'bg-secondary text-primary'} my-auto px-3 py-2 text-xs`}>
+            {video.quality}
+          </button>
+        ))}
+      </div>
     </div>
   )
 }
