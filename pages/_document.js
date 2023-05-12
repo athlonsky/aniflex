@@ -9,8 +9,8 @@ export default function Document() {
         <title>ANIFLEX</title>
       </Head>
       <body>
-        <Main />
-        <NextScript />
+        <Main/>
+        <NextScript/>
       </body>
     </Html>
   );

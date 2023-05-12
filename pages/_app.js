@@ -10,11 +10,11 @@ import Navbar from "../components/Navbar";
 import useAuth from '../components/UseAuth';
 import store from '../redux/store';
 import "../styles/globals.css";
+
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
   const [watchlist, setwatchlist] = useState([])
   const { isLoggedIn, user } = useAuth();
-
   const handleAuth = async () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
@@ -42,22 +42,17 @@ function MyApp({ Component, pageProps }) {
     login(user);
     onSnapshot(doc(db, 'users', `${user?.email}`), (doc) => {
       setwatchlist(doc.data()?.savedAnime);
-
-
     })
     return () => {
     }
   }, [user]);
-
-  return (
+  return(
     <Provider store={store}><div >
       <Navbar />
       <BottomNavbar user={user} isLoggedIn={isLoggedIn} />
     </div>
-
       <NextNProgress color="#8B0000" startPosition={0.3} height={5} showOnShallow={true} options={{ easing: 'ease-in' }} />
-      <div className="sm:pb-24 lg:pb-5 pt-6 lg:pt-24  ">
-
+      <div className="sm:pb-24 lg:pb-5 pt-6 lg:pt-24">
         <Component isLoggedIn={isLoggedIn} key={router.asPath} user={user} watchlist={watchlist} setwatchlist={setwatchlist} {...pageProps} handleAuth={handleAuth} />
       </div>
     </Provider>

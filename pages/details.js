@@ -9,6 +9,7 @@ import Row from "../components/Row";
 //   , ssr: false
 // });
 import Episodes from "../components/Episodes";
+
 function details({ deets, setwatchlist, watchlist, user, related, animen, notFound }) {
   const [epi, setEpi] = useState([]);
   const [epIsLoading, setepIsLoading] = useState(<Spinner radius={30} color='#DA0037' stroke={5} visible={true} />);
@@ -23,16 +24,13 @@ function details({ deets, setwatchlist, watchlist, user, related, animen, notFou
     }
   };
   useEffect(() => {
-
     fetchData();
   }, [animen]);
-
-  return (
+  return(
     <>
-
       {notFound ? (<div>No Data Found</div>) : (
-        <div className=" flex-column  ">
-          <Animedetails deets={deets} animen={animen} epi={epi} watchlist={watchlist} setwatchlist={setwatchlist} user={user} />
+        <div className=" flex-column">
+          <Animedetails deets={deets} animen={animen} epi={epi} watchlist={watchlist} setwatchlist={setwatchlist} user={user}/>
         </div>
       )}
       {epi.length > 0 ? (
@@ -41,28 +39,24 @@ function details({ deets, setwatchlist, watchlist, user, related, animen, notFou
         </div>
       ) : (
         <div className='w-fit h-full ease-in-out duration-200 grid justify-center mx-auto place-content-center'>
-
           <Spinner radius={30} color='#DA0037' stroke={5} visible={true} />
         </div>
       )}
       <div className="mb-24 lg:pb-10">
-
-
-        <Row typeOfAnime={related} text="Recommendations " />
+        <Row typeOfAnime={related} text="Recommendations"/>
       </div>
     </>
   );
 }
+
 export async function getServerSideProps(context) {
   const animeId = context.query.id;
   const detailsResponse = await fetch(`https://api.amvstr.ml/api/v2/info/${animeId}`);
   const details = await detailsResponse.json();
-
-
   const relatedResponse = await fetch(`https://api.amvstr.ml/api/v2/recommendations/${animeId}`);
   const related = await relatedResponse.json();
 
-  return {
+  return{
     props: {
       deets: details.data,
       animen: animeId,

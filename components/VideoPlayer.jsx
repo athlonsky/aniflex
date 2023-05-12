@@ -5,11 +5,9 @@ import { useEffect, useRef } from 'react'
 
 export default function VideoPlayer({ src }) {
   const videoRef = useRef(null)
-
   useEffect(() => {
     const video = videoRef.current
     if (!video) return
-
     video.controls = true
     const defaultOptions = {}
     if (video.canPlayType('application/vnd.apple.mpegurl')) {
@@ -17,7 +15,6 @@ export default function VideoPlayer({ src }) {
       video.src = src
     } else if (Hls.isSupported()) {
       // This will run in all other modern browsers
-
       const hls = new Hls()
       hls.loadSource(src)
       const player = new Plyr(video, defaultOptions)
@@ -26,8 +23,7 @@ export default function VideoPlayer({ src }) {
       console.error('This is an old browser that does not support MSE https://developer.mozilla.org/en-US/docs/Web/API/Media_Source_Extensions_API')
     }
   }, [src, videoRef])
-
-  return (
+  return(
     <>
       <video data-displaymaxtap ref={videoRef} />
       <style jsx>{`

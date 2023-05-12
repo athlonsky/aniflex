@@ -1,18 +1,15 @@
 import React from 'react'
 import AnimeCard from './AnimeCard'
 const Related = ({ relations, text }) => {
-  return (<>
-
+  return(<>
     <div className='w-11/12 mx-auto my-6 '>
-      <div className="text-xl lg:text-3xl mx-2  my-3 text-primary font-damion ">
+      <div className="text-xl lg:text-3xl mx-2 my-3 text-primary font-damion">
         {text}
       </div>
-      <div className=" flex overflow-x-scroll p-2 scrollbar-hide space-x-2 ">
+      <div className=" flex overflow-x-scroll p-2 scrollbar-hide space-x-2">
         {relations.map((e) => (
-
           e.type === "TV" &&
           <div key={e.id} >
-
             < AnimeCard
               key={e.id}
               animeImg={e.image}
@@ -22,7 +19,6 @@ const Related = ({ relations, text }) => {
           </div>
         ))}
         {relations.map((e) => (
-
           e.type === "MOVIE" &&
           <div key={e.id} >
             < AnimeCard
@@ -30,16 +26,11 @@ const Related = ({ relations, text }) => {
               animeImg={e.image}
               title={e.title.english || e.title.userPreferred}
               id={e.id}
-
             />
-
           </div>
-
         ))}
       </div>
     </div>
-
-
   </>
   )
 }
