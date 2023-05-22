@@ -39,10 +39,10 @@ const Episodes = ({ epi, deets, user, contwatch, setcontwatch }) => {
   const [episodedeets, setepisodedeets] = useState({ number: epi[0].number, title: epi[0].title, description: epi[0].description } || { number: epi[1].number, title: epi[1].title, description: epi[1].description })
   async function epfetch(epid) {
     await fetch(
-      "https://api.consumet.org/anime/gogoanime/watch/" + epid)
+      "https://api.amvstr.ml/api/v2/stream/" + epid)
       .then((res) => res.json())
       .then((json) => {
-        seteplink(json.sources)
+        seteplink(json.data.stream.multi)
       });
   }
   const [list, setList] = useState(false);
