@@ -6,7 +6,7 @@ export const Banner = ({ titles, description, imageban, id }) => {
     <div
       className="font h-[32vh] mx-auto lg:h-[55vh] space-y-2 md:space-y-4 justify-end z-0 bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url("${imageban}")`, }}>
-      <div className="bg-gradient-to-t from-secondary/20 to-black/20 h-full flex border flex-col-reverse px-5">
+      <div className="bg-gradient-to-t from-secondary/20 to-black/20 h-full flex border-2 flex-col-reverse px-5">
         <div className="m-2 lg:m-4">
           <h1 className="font-damion justify-center uppercase text-shadow-4xl text-primary text-3xl md:text-4xl lg:text-6xl">
             {titles}
