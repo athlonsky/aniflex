@@ -35,7 +35,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          push: ${{ github.ref == 'refs/heads/main'}}
+          push: ${{ github.ref == 'refs/heads/master'}}
           tags: |
             ghcr.io/athlonsky/aniflex:latest
             ghcr.io/athlonsky/aniflex:${{ github.ref_name }}-${{ steps.useful_vars.outputs.short_sha }}-${{ steps.useful_vars.outputs.timestamp }}
