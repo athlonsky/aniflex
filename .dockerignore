@@ -1,0 +1,5 @@
+.husky
+.next
+Dockerfile
+node_modules
+public
